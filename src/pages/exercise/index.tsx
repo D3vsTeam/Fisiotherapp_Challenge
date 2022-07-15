@@ -9,6 +9,15 @@ export default function Exercise() {
         <Image source={Person} />
         <Text>Fechar e Abrir as mãoes</Text>
         <Button title='Feito!'/>
+        <View>
+            <Text>Séries</Text>
+            <Text>Repetições</Text>
+            <Text>Descanso</Text>
+
+            <Text>--</Text>
+            <Text>10</Text>
+            <Text>5 Seg</Text>
+        </View>
     </View>
   );
 }
