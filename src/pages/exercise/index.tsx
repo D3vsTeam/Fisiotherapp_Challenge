@@ -5,11 +5,11 @@ import Person from "../../assets/hand.png";
 
 export default function Exercise() {
   return (
-    <View>
-        <Image source={Person} />
+    <View style={styles.container}>
+        <Image source={Person} style={styles.Imagem} />
         <Text>Fechar e Abrir as mãoes</Text>
         <Button title='Feito!'/>
-        <View>
+        <View style={styles.Descricao}>
             <Text>Séries</Text>
             <Text>Repetições</Text>
             <Text>Descanso</Text>
@@ -21,4 +21,16 @@ export default function Exercise() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    //CSS
+  },
+  Imagem: {
+    //CSS
+  },
+  Descricao:{
+    //CSS
+  }
+});
 
