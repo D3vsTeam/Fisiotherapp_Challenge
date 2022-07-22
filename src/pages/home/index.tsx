@@ -1,8 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Button, Image, ImageBackground, Text, View } from 'react-native';
+import { Image, ImageBackground, Text, View } from 'react-native';
 
 import Person from "../../assets/person.png";
+import { Container, ButtonStyled, Title, Subtile } from './styles';
 
 const Home: React.FC = () => {
   const navigation = useNavigation();
@@ -12,12 +13,12 @@ const Home: React.FC = () => {
   }
 
   return (
-    <View>
+    <Container>
       <Image source={Person} />
-      <Text>Hey, Loreona!</Text>
-      <Text>Let's start your treatment</Text>
-      <Button title='start' onPress={openExercise}/>
-    </View>
+      <Title>Hey, Loreona!</Title>
+      <Subtile>Let's start your treatment</Subtile>
+      <ButtonStyled title='start' onPress={openExercise} />
+    </Container>
   );
 }
 
