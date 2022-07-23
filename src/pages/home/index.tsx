@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Button, Image, ImageBackground, Text, View } from 'react-native';
+import { Image, ImageBackground, Text, View, Button } from 'react-native';
 
 import Person from "../../assets/person.png";
 
@@ -12,11 +12,11 @@ const Home: React.FC = () => {
   }
 
   return (
-    <View>
-      <Image source={Person} />
-      <Text>Hey, Loreona!</Text>
-      <Text>Let's start your treatment</Text>
-      <Button title='start' onPress={openExercise}/>
+    <View style={{ flex:1, justifyContent: 'center', padding: 30}}>
+      <Image source={Person} style={{marginBottom: 15}} />
+      <Text style={{fontSize: 42, textAlign: 'center', marginBottom: 25}}>Hey, Loreona!</Text>
+      <Text style={{fontSize: 32, textAlign: 'center', marginBottom: 40}}>Let's start your treatment</Text>
+      <Button title='Start treatment' color='#5B3FFF' onPress={openExercise}/>
     </View>
   );
 }
