@@ -4,22 +4,20 @@ import { StyleSheet, Text, View , Image, Button } from 'react-native';
 import Person from "../../assets/hand.png";
 
 
-let seriesNum=0;
 export default function Exercise() {
-  const [series,setSeries] = useState<Number>();
+  const [series,setSeries] = useState<number>(0);
 
   function handleSeries(){
-    seriesNum++;
-    setSeries(seriesNum);
+    setSeries(series + 1);
   }
 
   return (
     <View style={styles.container}>
         <View style={{padding: 30}}>
           <Image source={Person} style={styles.Imagem} />
-          <Text style={{fontSize: 32, textAlign: 'center'}}>Fechar e Abrir as {'\n'} mãos</Text>
+          <Text style={{fontSize: 32, textAlign: 'center'}}>Fechar e Abrir as <br /> mãos</Text>
           {
-          seriesNum >= 10
+          series >= 10
           ? <Button title='Você Conseguiu'color= 'green' onPress={handleSeries}  />
           : <Button title='Feito'color= '#5F48ED' onPress={handleSeries} />
           }
@@ -30,7 +28,7 @@ export default function Exercise() {
             <Text style={styles.TextDesc}>Descanso</Text>
         </View>
         <View style={styles.Descricao2}>
-            <Text style={styles.TextDesc2}>{seriesNum}</Text>
+            <Text style={styles.TextDesc2}>{series}</Text>
             <Text style={styles.TextDesc2}>10</Text>
             <Text style={styles.TextDesc2}>5 Seg</Text>
         </View>
